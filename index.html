@@ -2,12 +2,33 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tu casa sin enganche - 3D Homes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tu casa sin enganche | 3D Homes</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header>
+      <h1>Estás a un paso de tener tu casa sin enganche</h1>
+      <p>Desde $690,000 hasta $4,000,000 en Zapopan</p>
+    </header>
+    <section class="carousel">
+      <img src="img/casa1.jpg" alt="Casa en zona norte"/>
+      <img src="img/casa2.jpg" alt="Casa en zona sur"/>
+      <img src="img/casa3.jpg" alt="Casa residencial"/>
+    </section>
+    <section class="form-section">
+      <h2>Solicita información personalizada</h2>
+      <form action="https://formspree.io/f/xnqepgze" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required />
+        <input type="email" name="correo" placeholder="Correo electrónico" required />
+        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required />
+        <textarea name="mensaje" placeholder="¿Qué tipo de propiedad buscas?"></textarea>
+        <button type="submit">Quiero información</button>
+      </form>
+    </section>
+    <a href="https://wa.me/523329335952?text=Hola,%20quiero%20más%20información%20sobre%20las%20casas%20sin%20enganche" class="whatsapp" target="_blank">WhatsApp</a>
+    <audio autoplay loop>
+      <source src="audio/fondo.mp3" type="audio/mpeg">
+    </audio>
   </body>
 </html>
