@@ -4,33 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Tu casa sin enganche | 3D Homes</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Estás a un paso de tener tu casa sin enganche</h1>
       <p>Desde $690,000 hasta $4,000,000 en Zapopan</p>
     </header>
-    <section class="carousel">
-      <img src="/casa1.jpg" alt="Casa en zona norte"/>
-      <img src="/casa2.jpg" alt="Casa en zona sur"/>
-      <img src="/casa3.jpg" alt="Casa residencial"/>
-    </section>
+
     <section class="form-section">
       <h2>Solicita información personalizada</h2>
       <form action="https://formspree.io/f/xnqepgze" method="POST">
         <input type="text" name="nombre" placeholder="Tu nombre completo" required />
         <input type="email" name="correo" placeholder="Correo electrónico" required />
         <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required />
-        <textarea name="mensaje" placeholder="¿Qué tipo de propiedad buscas?"></textarea>
+
+        <label><strong>¿En qué zona te gustaría invertir tu hogar?</strong></label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="zona[]" value="Zapopan"> Zapopan</label>
+          <label><input type="checkbox" name="zona[]" value="Tlajomulco"> Tlajomulco</label>
+          <label><input type="checkbox" name="zona[]" value="Santa Anita"> Santa Anita</label>
+          <label><input type="checkbox" name="zona[]" value="Zona Guadalajara"> Zona Guadalajara</label>
+          <label><input type="checkbox" name="zona[]" value="Tonala"> Tonalá</label>
+          <label><input type="checkbox" name="zona[]" value="El Salto"> El Salto</label>
+        </div>
+        <textarea name="zona_otro" placeholder="¿Alguna colonia o zona específica que prefieras?"></textarea>
+
+        <label><strong>¿Qué tipo de crédito o pago usarás?</strong></label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="credito[]" value="Infonavit"> Infonavit</label>
+          <label><input type="checkbox" name="credito[]" value="Bancario"> Bancario</label>
+        </div>
+        <textarea name="credito_otro" placeholder="Especifica tu tipo de crédito o forma de pago"></textarea>
+
+        <label><strong>¿Qué edad tienes?</strong></label>
+        <div class="checkbox-grid">
+          <label><input type="radio" name="edad" value="22-29"> 22 a 29</label>
+          <label><input type="radio" name="edad" value="30-39"> 30 a 39</label>
+          <label><input type="radio" name="edad" value="40-49"> 40 a 49</label>
+          <label><input type="radio" name="edad" value="50+"> Más de 50</label>
+        </div>
+
+        <textarea name="mensaje" placeholder="¿Qué tipo de propiedad estás buscando? Casa, depa, terreno, etc."></textarea>
         <button type="submit">Quiero información</button>
       </form>
     </section>
+
     <a href="https://wa.me/523329335952?text=Hola,%20quiero%20más%20información%20sobre%20las%20casas%20sin%20enganche" class="whatsapp" target="_blank">WhatsApp</a>
 
     <audio autoplay loop>
-      <source src="/musica-piano.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio HTML5.
+      <source src="audio/musica-piano.mp3" type="audio/mpeg">
     </audio>
   </body>
 </html>
