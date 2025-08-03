@@ -1,0 +1,65 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+header p {
+  margin-top: 0.5rem;
+}
+.form-section {
+  padding: 2rem 1rem;
+}
+.form-section h2 {
+  font-size: 1.4rem;
+}
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+input, textarea, button {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.whatsapp {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: green;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  border-radius: 50px;
+}
+.subtext {
+  font-size: 0.9rem;
+  color: #666;
+  margin: -1rem 0 1.5rem 0;
+  text-align: center;
+  line-height: 1.4;
+}
