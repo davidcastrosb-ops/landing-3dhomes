@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tu casa sin enganche | 3D Homes</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '5267351375671615');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=5267351375671615&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <header>
+      <h1>🏡 Haz realidad el sueño de tu casa propia</h1>
+      <p>✨ Hoy puedes dar el primer paso hacia un hogar que será solo tuyo.</p>
+    </header>
+
+    <section class="form-section">
+      <h2>📩 Déjanos tus datos y recibe atención personalizada, sin compromiso</h2>
+      <p class="subtext">
+        🎯 Te mostraremos solo opciones que se adapten a ti.<br>
+        🔒 Tus datos están protegidos y se usarán exclusivamente para ayudarte a encontrar el hogar ideal para ti y tu familia.<br>
+        💬 Estamos contigo desde la búsqueda... hasta que tengas las llaves en la mano.
+      </p>
+
+      <form action="https://formspree.io/f/xnqepgze" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required />
+        <input type="email" name="correo" placeholder="Correo electrónico" required />
+        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required />
+
+        <label><strong>¿En qué zona te gustaría Invertir?</strong></label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="zona[]" value="Zapopan"> Zapopan</label>
+          <label><input type="checkbox" name="zona[]" value="Tlajomulco"> Tlajomulco</label>
+          <label><input type="checkbox" name="zona[]" value="Santa Anita"> Santa Anita</label>
+          <label><input type="checkbox" name="zona[]" value="Zona Guadalajara"> Guadalajara</label>
+          <label><input type="checkbox" name="zona[]" value="Tonala"> Tonalá</label>
+          <label><input type="checkbox" name="zona[]" value="El Salto"> El Salto</label>
+        </div>
+        <textarea name="zona_otro" placeholder="¿Otra Zona específica ?"></textarea>
+
+        <label><strong>¿Qué tipo de crédito o pago usarás?</strong></label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="credito[]" value="Infonavit"> Infonavit</label>
+          <label><input type="checkbox" name="credito[]" value="Bancario"> Bancario</label>
+        </div>
+        <textarea name="credito_otro" placeholder="Especifica forma de pago"></textarea>
+
+        <label><strong>¿Qué edad tienes?</strong></label>
+        <div class="checkbox-grid">
+          <label><input type="radio" name="edad" value="22-29"> 22 a 29</label>
+          <label><input type="radio" name="edad" value="30-39"> 30 a 39</label>
+          <label><input type="radio" name="edad" value="40-49"> 40 a 49</label>
+          <label><input type="radio" name="edad" value="50+"> Más de 50</label>
+        </div>
+
+        <textarea name="mensaje" placeholder="¿Otra información?"></textarea>
+        <button type="submit">Quiero información</button>
+      </form>
+    </section>
+
+    <a href="https://wa.me/523329335952?text=Hola,%20quiero%20más%20información%20sobre%20las%20casas%20sin%20enganche" class="whatsapp" target="_blank">WhatsApp</a>
+  </body>
+</html>
