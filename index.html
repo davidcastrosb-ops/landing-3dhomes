@@ -2,102 +2,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario 3D Homes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .success {
-            color: green;
-            text-align: center;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario 3D Homes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f9f1;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #2a7a4f;
+    }
+    form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #ccc;
+      width: 100%;
+      max-width: 500px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 0.5rem 0 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #2a7a4f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #256b45;
+    }
+    .success-message, .error-message {
+      display: none;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    .success-message {
+      color: green;
+    }
+    .error-message {
+      color: red;
+    }
+  </style>
 </head>
 <body>
-    <h2>🚀 ¡Estás a un paso de tu nuevo hogar! 🏡</h2>
-    <form id="formulario">
-        <label for="nombre">Nombre Completo:</label>
-        <input type="text" id="nombre" name="Nombre" required>
+  <h1>🏡 Haz realidad el sueño de tu casa propia</h1>
+  <form id="contact-form">
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" required />
 
-        <label for="correo">Correo Electrónico:</label>
-        <input type="email" id="correo" name="Correo" required>
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" name="correo" required />
 
-        <label for="telefono">Teléfono / WhatsApp:</label>
-        <input type="tel" id="telefono" name="Telefono" required>
+    <label for="telefono">WhatsApp</label>
+    <input type="tel" id="telefono" name="telefono" required />
 
-        <label for="zona">Zonas de Interés:</label>
-        <select id="zona" name="Zona">
-            <option value="Norte">Zona Norte</option>
-            <option value="Sur">Zona Sur</option>
-            <option value="Centro">Zona Centro</option>
-            <option value="Otra">Otra Zona</option>
-        </select>
+    <label for="zona">Zona de interés</label>
+    <select id="zona" name="zona">
+      <option value="Norte">Norte</option>
+      <option value="Sur">Sur</option>
+      <option value="Centro">Centro</option>
+      <option value="Otra">Otra</option>
+    </select>
 
-        <label for="credito">Tipo de Crédito:</label>
-        <select id="credito" name="Credito">
-            <option value="Infonavit">Infonavit</option>
-            <option value="Fovissste">Fovissste</option>
-            <option value="Bancario">Bancario</option>
-            <option value="Recurso Propio">Recurso Propio</option>
-        </select>
+    <label for="mensaje">Mensaje adicional</label>
+    <textarea id="mensaje" name="mensaje" rows="3"></textarea>
 
-        <label for="mensaje">Mensaje Adicional:</label>
-        <textarea id="mensaje" name="Mensaje" rows="4"></textarea>
+    <button type="submit">Quiero información</button>
 
-        <button type="submit">Enviar Datos</button>
-    </form>
-    <p class="success" id="respuesta"></p>
+    <div class="success-message" id="success">✅ Datos enviados con éxito.</div>
+    <div class="error-message" id="error">❌ Ocurrió un error al enviar tus datos.</div>
+  </form>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby7xZxcXwQGqlwIlsGKdAyznlN3FeHTSqctU6uWMXWkc-hF2VIFn3Xdb1XP_vRgkyua/exec';
-        const form = document.getElementById('formulario');
-        const respuesta = document.getElementById('respuesta');
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycby7xZxcXwQGqlwIlsGKdAyznlN3FeHTSqctU6uWMXWkc-hF2VIFn3Xdb1XP_vRgkyua/exec";
+    const form = document.getElementById("contact-form");
+    const successMsg = document.getElementById("success");
+    const errorMsg = document.getElementById("error");
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            fetch(scriptURL, { method: 'POST', body: formData })
-                .then(response => {
-                    respuesta.innerHTML = '✅ ¡Datos enviados con éxito!';
-                    form.reset();
-                })
-                .catch(error => {
-                    respuesta.innerHTML = '❌ Error al enviar. Intenta de nuevo.';
-                });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      })
+        .then((response) => {
+          successMsg.style.display = "block";
+          errorMsg.style.display = "none";
+          form.reset();
+        })
+        .catch((error) => {
+          successMsg.style.display = "none";
+          errorMsg.style.display = "block";
         });
-    </script>
+    });
+  </script>
 </body>
 </html>
