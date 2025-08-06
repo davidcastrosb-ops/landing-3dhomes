@@ -2,112 +2,128 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulario 3D Homes</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f9f1;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-    h1 {
-      color: #2a7a4f;
-    }
-    form {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px #ccc;
-      width: 100%;
-      max-width: 500px;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 0.5rem 0 1rem 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #2a7a4f;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #256b45;
-    }
-    .success-message, .error-message {
-      display: none;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    .success-message {
-      color: green;
-    }
-    .error-message {
-      color: red;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Formulario - Tu casa sin enganche</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 520px;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 1rem;
+            color: #14532d;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 0.3rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 1.5rem;
+            padding: 12px;
+            width: 100%;
+            background-color: #22c55e;
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #success-message {
+            margin-top: 1rem;
+            color: #15803d;
+            font-weight: 600;
+            display: none;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <h1>🏡 Haz realidad el sueño de tu casa propia</h1>
-  <form id="contact-form">
-    <label for="nombre">Nombre completo</label>
-    <input type="text" id="nombre" name="nombre" required />
+    <div class="container">
+        <h1>🏡 Haz realidad el sueño de tu casa propia</h1>
+        <form id="leadForm">
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" required>
 
-    <label for="correo">Correo electrónico</label>
-    <input type="email" id="correo" name="correo" required />
+            <label>Correo electrónico</label>
+            <input type="email" name="correo" required>
 
-    <label for="telefono">WhatsApp</label>
-    <input type="tel" id="telefono" name="telefono" required />
+            <label>WhatsApp</label>
+            <input type="text" name="telefono" required>
 
-    <label for="zona">Zona de interés</label>
-    <select id="zona" name="zona">
-      <option value="Norte">Norte</option>
-      <option value="Sur">Sur</option>
-      <option value="Centro">Centro</option>
-      <option value="Otra">Otra</option>
-    </select>
+            <label>Zona de interés</label>
+            <select name="zona">
+                <option value="Zapopan">Zapopan</option>
+                <option value="Tlajomulco">Tlajomulco</option>
+                <option value="El Salto">El Salto</option>
+                <option value="Tonalá">Tonalá</option>
+                <option value="Guadalajara Centro">Guadalajara Centro</option>
+                <option value="Otra zona">Otra zona (especifique en mensaje)</option>
+            </select>
 
-    <label for="mensaje">Mensaje adicional</label>
-    <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+            <label>Tipo de crédito</label>
+            <select name="credito">
+                <option value="Infonavit">Infonavit</option>
+                <option value="Fovissste">Fovissste</option>
+                <option value="Bancario">Bancario</option>
+                <option value="Recurso propio">Recurso propio</option>
+                <option value="Otro crédito">Otro crédito o combinación</option>
+            </select>
 
-    <button type="submit">Quiero información</button>
+            <label>Edad</label>
+            <input type="number" name="edad" min="18" max="80" required>
 
-    <div class="success-message" id="success">✅ Datos enviados con éxito.</div>
-    <div class="error-message" id="error">❌ Ocurrió un error al enviar tus datos.</div>
-  </form>
+            <label>Mensaje adicional</label>
+            <textarea name="mensaje"></textarea>
 
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycby7xZxcXwQGqlwIlsGKdAyznlN3FeHTSqctU6uWMXWkc-hF2VIFn3Xdb1XP_vRgkyua/exec";
-    const form = document.getElementById("contact-form");
-    const successMsg = document.getElementById("success");
-    const errorMsg = document.getElementById("error");
+            <button type="submit">Quiero información</button>
+            <div id="success-message">✅ Datos enviados con éxito.</div>
+        </form>
+    </div>
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      fetch(scriptURL, {
-        method: "POST",
-        body: new FormData(form),
-      })
-        .then((response) => {
-          successMsg.style.display = "block";
-          errorMsg.style.display = "none";
-          form.reset();
-        })
-        .catch((error) => {
-          successMsg.style.display = "none";
-          errorMsg.style.display = "block";
+    <script>
+        const form = document.getElementById("leadForm");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+            const response = await fetch("https://script.google.com/macros/s/AKfycbzUQuDPiBcmfDaIJFHyEB3NYs7YoGcbEOkDZs6vw63n7URRQqOCgQGxnJwL3HLB0y8f/exec", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: { "Content-Type": "application/json" }
+            });
+            if (response.ok) {
+                document.getElementById("success-message").style.display = "block";
+                form.reset();
+            }
         });
-    });
-  </script>
+    </script>
 </body>
 </html>
