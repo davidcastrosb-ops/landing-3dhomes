@@ -2,127 +2,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tu Casa Ideal con Crédito</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-      margin: 0;
-      padding: 2rem;
-      color: #333;
-    }
-    h1 {
-      color: #d4af37;
-      font-size: 2rem;
-      text-align: center;
-    }
-    form {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.3rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      margin-top: 1.5rem;
-      padding: 0.75rem;
-      width: 100%;
-      background-color: #d4af37;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #b8962f;
-    }
-    .mensaje-exito {
-      text-align: center;
-      color: green;
-      font-weight: bold;
-      margin-top: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 3D Homes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .success {
+            color: green;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <h1>✨ Estás a un paso de tener tu casa propia</h1>
-  <form id="miFormulario">
-    <label for="nombre">👤 Nombre Completo</label>
-    <input type="text" id="nombre" name="nombre" required />
+    <h2>🚀 ¡Estás a un paso de tu nuevo hogar! 🏡</h2>
+    <form id="formulario">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="Nombre" required>
 
-    <label for="correo">📧 Correo Electrónico</label>
-    <input type="email" id="correo" name="correo" required />
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="Correo" required>
 
-    <label for="telefono">📱 Teléfono / WhatsApp</label>
-    <input type="tel" id="telefono" name="telefono" required />
+        <label for="telefono">Teléfono / WhatsApp:</label>
+        <input type="tel" id="telefono" name="Telefono" required>
 
-    <label for="zona">📍 Zona donde te interesa vivir</label>
-    <select id="zona" name="zona">
-      <option value="Norte">Norte</option>
-      <option value="Sur">Sur</option>
-      <option value="Centro">Centro</option>
-      <option value="Otra">Otra</option>
-    </select>
+        <label for="zona">Zonas de Interés:</label>
+        <select id="zona" name="Zona">
+            <option value="Norte">Zona Norte</option>
+            <option value="Sur">Zona Sur</option>
+            <option value="Centro">Zona Centro</option>
+            <option value="Otra">Otra Zona</option>
+        </select>
 
-    <label for="otra_zona">Si seleccionaste "Otra", ¿cuál?</label>
-    <input type="text" id="otra_zona" name="otra_zona" />
+        <label for="credito">Tipo de Crédito:</label>
+        <select id="credito" name="Credito">
+            <option value="Infonavit">Infonavit</option>
+            <option value="Fovissste">Fovissste</option>
+            <option value="Bancario">Bancario</option>
+            <option value="Recurso Propio">Recurso Propio</option>
+        </select>
 
-    <label for="credito">💳 Crédito que usarás</label>
-    <select id="credito" name="credito">
-      <option value="Infonavit">Infonavit</option>
-      <option value="Fovissste">Fovissste</option>
-      <option value="Bancario">Bancario</option>
-      <option value="Recurso propio">Recurso propio</option>
-      <option value="Otro">Otro</option>
-    </select>
+        <label for="mensaje">Mensaje Adicional:</label>
+        <textarea id="mensaje" name="Mensaje" rows="4"></textarea>
 
-    <label for="otro_credito">Si seleccionaste "Otro", ¿cuál?</label>
-    <input type="text" id="otro_credito" name="otro_credito" />
+        <button type="submit">Enviar Datos</button>
+    </form>
+    <p class="success" id="respuesta"></p>
 
-    <label for="edad">🎂 Edad</label>
-    <input type="number" id="edad" name="edad" />
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby7xZxcXwQGqlwIlsGKdAyznlN3FeHTSqctU6uWMXWkc-hF2VIFn3Xdb1XP_vRgkyua/exec';
+        const form = document.getElementById('formulario');
+        const respuesta = document.getElementById('respuesta');
 
-    <label for="mensaje">📌 Mensaje adicional</label>
-    <textarea id="mensaje" name="mensaje" rows="3"></textarea>
-
-    <button type="submit">Enviar datos 📨</button>
-
-    <div class="mensaje-exito" id="mensajeExito"></div>
-  </form>
-
-  <script>
-    document.getElementById("miFormulario").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      fetch("https://script.google.com/macros/s/AKfycby7xZxcXwQGqlwIlsGKdAyznlN3FeHTSqctU6uWMXWkc-hF2VIFn3Xdb1XP_vRgkyua/exec", {
-        method: "POST",
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("mensajeExito").textContent = "✅ Datos enviados con éxito. ¡Gracias por confiar en nosotros!";
-        document.getElementById("miFormulario").reset();
-      })
-      .catch(error => {
-        document.getElementById("mensajeExito").textContent = "❌ Error al enviar datos. Inténtalo más tarde.";
-      });
-    });
-  </script>
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    respuesta.innerHTML = '✅ ¡Datos enviados con éxito!';
+                    form.reset();
+                })
+                .catch(error => {
+                    respuesta.innerHTML = '❌ Error al enviar. Intenta de nuevo.';
+                });
+        });
+    </script>
 </body>
 </html>
