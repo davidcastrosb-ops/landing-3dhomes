@@ -1,85 +1,87 @@
 
 <!DOCTYPE html>
-<html lang="="es">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Haz realidad el sueño de tu casa propia</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff9f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff7f1;
       color: #333;
       padding: 20px;
     }
     h1 {
       color: #e77d11;
       text-align: center;
+      font-size: 28px;
     }
     form {
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto;
       background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      padding: 25px;
     }
     label {
       display: block;
-      margin-top: 10px;
-      font-weight: bold;
+      margin-top: 15px;
+      font-weight: 600;
     }
     input, textarea, select {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
+      padding: 10px;
+      margin-top: 6px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      font-size: 15px;
     }
     .checkbox-group, .radio-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
     .checkbox-group label,
     .radio-group label {
       font-weight: normal;
     }
     button {
-      margin-top: 15px;
-      padding: 10px;
+      margin-top: 20px;
+      padding: 12px;
       background-color: #e77d11;
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 17px;
     }
     .success {
       color: green;
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 12px;
     }
     .error {
       color: red;
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 12px;
     }
   </style>
 </head>
 <body>
-  <h1>Haz realidad el sueño de tu casa propia</h1>
+  <h1>🏡 ¡Haz realidad el sueño de tu casa propia!</h1>
   <form id="leadForm">
-    <label>Nombre completo:</label>
+    <label>🙋 Nombre completo:</label>
     <input type="text" name="nombre" required />
 
-    <label>Correo electrónico:</label>
+    <label>📧 Correo electrónico:</label>
     <input type="email" name="correo" required />
 
-    <label>Teléfono / WhatsApp:</label>
+    <label>📱 Teléfono / WhatsApp:</label>
     <input type="text" name="telefono" required />
 
-    <label>¿En qué zona te gustaría invertir?</label>
+    <label>📍 ¿En qué zona te gustaría invertir?</label>
     <div class="checkbox-group">
       <label><input type="checkbox" name="zona" value="Zapopan" /> Zapopan</label>
       <label><input type="checkbox" name="zona" value="Santa Anita" /> Santa Anita</label>
@@ -88,16 +90,16 @@
       <label><input type="checkbox" name="zona" value="Guadalajara" /> Guadalajara</label>
       <label><input type="checkbox" name="zona" value="El Salto" /> El Salto</label>
     </div>
-    <textarea name="otrazona" placeholder="¿Otra zona específica ?"></textarea>
+    <textarea name="otrazona" placeholder="¿Otra zona específica?"></textarea>
 
-    <label>¿Qué tipo de crédito o pago usarás?</label>
+    <label>💳 ¿Qué tipo de crédito o pago usarás?</label>
     <div class="checkbox-group">
       <label><input type="checkbox" name="credito" value="Infonavit" /> Infonavit</label>
       <label><input type="checkbox" name="credito" value="Bancario" /> Bancario</label>
     </div>
     <textarea name="mensaje" placeholder="Especifica forma de pago"></textarea>
 
-    <label>¿Qué edad tienes?</label>
+    <label>🎂 ¿Qué edad tienes?</label>
     <div class="radio-group">
       <label><input type="radio" name="edad" value="22 a 29" /> 22 a 29</label>
       <label><input type="radio" name="edad" value="30 a 39" /> 30 a 39</label>
@@ -105,9 +107,9 @@
       <label><input type="radio" name="edad" value="Más de 50" /> Más de 50</label>
     </div>
 
-    <textarea name="mensajeadicional" placeholder="¿Otra información?"></textarea>
+    <textarea name="mensajeadicional" placeholder="¿Otra información que quieras compartir?"></textarea>
 
-    <button type="submit">Quiero información</button>
+    <button type="submit">🚀 Quiero información</button>
     <div id="statusMessage"></div>
   </form>
 
