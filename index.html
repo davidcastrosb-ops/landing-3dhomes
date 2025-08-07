@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -5,25 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Tu casa sin enganche | 3D Homes</title>
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '5267351375671615');
-      fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=5267351375671615&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
+    <style>
+      .success-message {
+        margin-top: 15px;
+        font-weight: bold;
+        color: green;
+        display: none;
+      }
+    </style>
   </head>
 
   <body>
@@ -40,26 +30,26 @@
         💬 Estamos contigo desde la búsqueda... hasta que tengas las llaves en la mano.
       </p>
 
-      <form action="https://formspree.io/f/xnqepgze" method="POST">
+      <form id="registroForm">
         <input type="text" name="nombre" placeholder="Tu nombre completo" required />
         <input type="email" name="correo" placeholder="Correo electrónico" required />
         <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required />
 
         <label><strong>¿En qué zona te gustaría Invertir?</strong></label>
         <div class="checkbox-grid">
-          <label><input type="checkbox" name="zona[]" value="Zapopan"> Zapopan</label>
-          <label><input type="checkbox" name="zona[]" value="Tlajomulco"> Tlajomulco</label>
-          <label><input type="checkbox" name="zona[]" value="Santa Anita"> Santa Anita</label>
-          <label><input type="checkbox" name="zona[]" value="Zona Guadalajara"> Guadalajara</label>
-          <label><input type="checkbox" name="zona[]" value="Tonala"> Tonalá</label>
-          <label><input type="checkbox" name="zona[]" value="El Salto"> El Salto</label>
+          <label><input type="checkbox" name="zona" value="Zapopan"> Zapopan</label>
+          <label><input type="checkbox" name="zona" value="Tlajomulco"> Tlajomulco</label>
+          <label><input type="checkbox" name="zona" value="Santa Anita"> Santa Anita</label>
+          <label><input type="checkbox" name="zona" value="Zona Guadalajara"> Guadalajara</label>
+          <label><input type="checkbox" name="zona" value="Tonala"> Tonalá</label>
+          <label><input type="checkbox" name="zona" value="El Salto"> El Salto</label>
         </div>
         <textarea name="zona_otro" placeholder="¿Otra Zona específica ?"></textarea>
 
         <label><strong>¿Qué tipo de crédito o pago usarás?</strong></label>
         <div class="checkbox-grid">
-          <label><input type="checkbox" name="credito[]" value="Infonavit"> Infonavit</label>
-          <label><input type="checkbox" name="credito[]" value="Bancario"> Bancario</label>
+          <label><input type="checkbox" name="credito" value="Infonavit"> Infonavit</label>
+          <label><input type="checkbox" name="credito" value="Bancario"> Bancario</label>
         </div>
         <textarea name="credito_otro" placeholder="Especifica forma de pago"></textarea>
 
@@ -74,8 +64,27 @@
         <textarea name="mensaje" placeholder="¿Otra información?"></textarea>
         <button type="submit">Quiero información</button>
       </form>
+
+      <p class="success-message" id="mensajeExito">✅ ¡Datos enviados con éxito!</p>
     </section>
 
     <a href="https://wa.me/523329335952?text=Hola,%20quiero%20más%20información%20sobre%20las%20casas%20sin%20enganche" class="whatsapp" target="_blank">WhatsApp</a>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz9RNYx4zUUlUsST1I-5oEKohZkFNO96LyVQ82MeYgrF91MA-bZoB-bTDcEQ9ZSludk4g/exec';
+      const form = document.getElementById('registroForm');
+      const mensajeExito = document.getElementById('mensajeExito');
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => {
+            form.reset();
+            mensajeExito.style.display = 'block';
+          })
+          .catch(error => alert('Ocurrió un error al enviar tus datos.'));
+      });
+    </script>
   </body>
 </html>
