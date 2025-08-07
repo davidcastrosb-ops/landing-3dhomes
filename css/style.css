@@ -1,41 +1,21 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #111;
-  padding: 2em;
-  max-width: 800px;
+.container {
+  max-width: 600px;
   margin: auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
 }
-
-h1, h2 {
-  color: #D93240;
-}
-
-input, textarea, button {
+input, button {
   display: block;
-  margin-top: 1em;
-  padding: 0.7em;
   width: 100%;
-  max-width: 100%;
-  font-size: 1em;
+  margin-top: 10px;
+  padding: 10px;
 }
-
-.checkbox-group, .radio-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin-top: 0.5em;
-}
-
-button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #333;
+.cta {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #ffc107;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
 }
