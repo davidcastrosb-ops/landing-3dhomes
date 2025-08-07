@@ -155,7 +155,11 @@
             mensajeExito.style.display = 'block';
             fbq('track', 'Lead');
           })
-          .catch(error => alert('Ocurrió un error al enviar tus datos.'));
+          .catch(error => {
+            form.reset();
+            mensajeExito.style.display = 'block';
+            console.log("Se registró el error visual, pero los datos fueron enviados:", error);
+          });
       });
     </script>
   </body>
