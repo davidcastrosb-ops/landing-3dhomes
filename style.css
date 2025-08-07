@@ -1,34 +1,37 @@
+
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
-  color: #222;
-  margin: 0;
-  padding: 40px;
-  text-align: center;
+  background: #fdfdfd;
+  padding: 20px;
 }
-.container {
-  max-width: 600px;
+.form-wrapper {
+  max-width: 700px;
   margin: auto;
-  padding: 2rem;
   background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-h1 {
-  color: #c39c4a;
-  font-size: 2rem;
+input, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
 }
-.cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #c39c4a;
+button {
+  background: black;
   color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background 0.3s;
+  padding: 12px 20px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
 }
-.cta:hover {
-  background: #a88332;
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
 }
