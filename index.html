@@ -78,7 +78,16 @@
       form.addEventListener('submit', e => {
         e.preventDefault();
         const formData = new FormData(form);
-        fetch(scriptURL, { method: 'POST', body: formData })
+        
+    // Procesar manualmente los checkbox múltiples
+    const zonas = [...form.querySelectorAll('input[name="zona"]:checked')].map(cb => cb.value).join(', ');
+    const creditos = [...form.querySelectorAll('input[name="credito"]:checked')].map(cb => cb.value).join(', ');
+
+    formData.set('zona', zonas);
+    formData.set('credito', creditos);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+    
           .then(response => {
             form.reset();
             mensajeExito.style.display = 'block';
