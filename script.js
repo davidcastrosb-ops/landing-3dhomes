@@ -1,21 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("formulario");
 
-document.getElementById('formulario').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(this);
-  fetch('https://script.google.com/macros/s/AKfycbyZKYPx1jkydjx_KSGPBHqAlnqxKJzvRhh4D3cvGZ5LWrxtn50ZqdMvGrT1rYzASWmQ5w/exec', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-      alert('✅ ¡Datos enviados con éxito! Nos pondremos en contacto muy pronto.');
-      this.reset();
-    } else {
-      throw new Error('Error al enviar los datos');
-    }
-  })
-  .catch(error => {
-    alert('❌ Error al enviar los datos');
-    console.error(error);
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const datos = new FormData(form);
+    const url = "https://script.google.com/macros/s/AKfycbwu_FZgR3nuCxFB92YKhspk-yWo5RfKvBLlsMHOi7JMXejTC-cXJH0L6XddScadq7LQ/exec";
+
+    fetch(url, {
+      method: "POST",
+      body: datos,
+    })
+    .then(res => res.ok ? res.text() : Promise.reject(res.status))
+    .then(() => {
+      alert("✅ Datos enviados con éxito");
+
+      // Meta (Facebook) Event
+      if (typeof fbq !== "undefined") {
+        fbq('track', 'Lead');
+      }
+
+      // Google Ads Event - reemplaza con tus datos reales
+      if (typeof gtag !== "undefined") {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'
+        });
+      }
+
+      form.reset();
+    })
+    .catch(err => {
+      alert("❌ Error al enviar los datos");
+      console.error("Error al enviar:", err);
+    });
   });
 });
