@@ -6,16 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tu Casa con Crédito Infonavit - 3D Homes</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Pixel Meta -->
   <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
     (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '959639488034094');
     fbq('track', 'PageView');
   </script>
-  <!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-977116457"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -75,7 +74,7 @@
     .form-group {
       margin-bottom: 15px;
     }
-    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    input[type="text"], input[type="email"], input[type="tel"], select {
       width: 100%;
       padding: 12px;
       border: none;
@@ -205,15 +204,23 @@
       Sitio desarrollado para uso de Trhoncal Homes (en evolución)
     </div>
   </div>
-  <!-- Google Ads conversion event trigger -->
   <script>
     document.getElementById("formulario-casa").addEventListener("submit", function(e) {
       e.preventDefault();
-      gtag('event', 'conversion', {
-        'send_to': 'AW-977116457/6g0RCI3irIEbEKm69tED'
+      const formData = new FormData(e.target);
+      fetch("https://script.google.com/macros/s/AKfycbzGSoKe6Nks3A_P_fF_AJnM_MvzZ6xLuF2Koz0IvKcIl99JDdLYB2z2KvuVVZIVXiGZ/exec", {
+        method: "POST",
+        body: formData
+      }).then(response => {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-977116457/6g0RCI3irIEbEKm69tED'
+        });
+        document.getElementById("whatsapp-btn").style.display = "block";
+        alert("✅ ¡Gracias por tu registro! Ahora puedes continuar por WhatsApp.");
+      }).catch(error => {
+        alert("Ocurrió un error al enviar tus datos.");
+        console.error(error);
       });
-      document.getElementById("whatsapp-btn").style.display = "block";
-      alert("✅ ¡Gracias por tu registro! Ahora puedes continuar por WhatsApp. Un asesor certificado te atenderá.");
     });
   </script>
 </body>
