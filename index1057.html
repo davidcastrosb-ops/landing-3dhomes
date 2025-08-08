@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Casa con Crédito Infonavit - 3D Homes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Pixel Meta -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '959639488034094');
+    fbq('track', 'PageView');
+  </script>
+  <!-- Google Ads Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-977116457"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-977116457');
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+    }
+    h1, h2, p, label {
+      color: #fff;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.4em;
+      font-weight: 400;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .subinfo {
+      font-size: 1em;
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #000;
+      font-size: 1em;
+      box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+    }
+    button {
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e6b800;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      gap: 20px;
+      max-width: 600px;
+      width: 100%;
+    }
+    .step {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+    }
+    .marca {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .whatsapp-btn {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .whatsapp-btn a {
+      background-color: #25d366;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+<div class="overlay">
+  <div class="form-container">
+    <h1>Tu casa propia desde 0% de enganche 🏡</h1>
+    <h2>Desde $690,000 hasta $5,000,000</h2>
+    <p class="subinfo">Déjanos tus datos y recibe atención profesional ✨<br>📊 Precalificación Infonavit / Bancaria y asesoría sin costo ni compromiso</p>
+    <form id="formulario-casa">
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" />
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono / WhatsApp</label>
+        <input type="tel" id="telefono" name="telefono" required pattern="\d{10}" />
+      </div>
+      <div class="form-group">
+        <label for="zona">¿En qué zona te gustaría invertir?</label>
+        <select id="zona" name="zona" required>
+          <option value="">Selecciona una zona</option>
+          <option value="Zapopan">Zapopan</option>
+          <option value="Tlajomulco">Tlajomulco</option>
+          <option value="El Salto">El Salto</option>
+          <option value="Tonalá">Tonalá</option>
+          <option value="Guadalajara Centro">Guadalajara Centro</option>
+          <option value="Otra">Otra zona</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tipo_credito">¿Qué tipo de crédito o pago usarás?</label>
+        <select id="tipo_credito" name="tipo_credito" required>
+          <option value="">Selecciona un tipo de crédito</option>
+          <option value="Infonavit">Infonavit</option>
+          <option value="Fovissste">Fovissste</option>
+          <option value="Bancario">Bancario</option>
+          <option value="Recurso Propio">Recurso Propio</option>
+          <option value="Segundo Crédito">Segundo Crédito</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="edad">¿Qué edad tienes?</label>
+        <select id="edad" name="edad" required>
+          <option value="">Selecciona tu rango de edad</option>
+          <option value="22-29">22 a 29</option>
+          <option value="30-39">30 a 39</option>
+          <option value="40-49">40 a 49</option>
+          <option value="50+">Más de 50</option>
+        </select>
+      </div>
+      <button type="submit">Quiero información</button>
+    </form>
+    <div class="whatsapp-btn" id="whatsapp-btn">
+      <a href="https://wa.me/523329335952" target="_blank">📲 Continuar por WhatsApp (un asesor certificado te atenderá)</a>
+    </div>
+  </div>
+  <div class="steps">
+    <div class="step">1️⃣ Llena el formulario y cuéntanos tu situación</div>
+    <div class="step">2️⃣ Te mostramos solo opciones que se adaptan a ti</div>
+    <div class="step">3️⃣ Te acompañamos hasta que tengas tus llaves en la mano</div>
+  </div>
+  <div class="marca">
+    Trhoncal Homes – Renovando al límite ⚡
+  </div>
+</div>
+<script>
+  document.getElementById("formulario-casa").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const telefono = document.getElementById("telefono").value;
+    const zona = document.getElementById("zona").value;
+    const tipo_credito = document.getElementById("tipo_credito").value;
+    const edad = document.getElementById("edad").value;
+
+    if (!correo.includes("@") || !/^\d{10}$/.test(telefono)) {
+      alert("Por favor, verifica que el correo tenga formato válido y el teléfono tenga 10 dígitos.");
+      return;
+    }
+
+    gtag('event', 'conversion', {
+      'send_to': 'AW-977116457/6g0RCI3irIEbEKm69tED'
+    });
+    fbq('track', 'Lead');
+
+    fetch("https://script.google.com/macros/s/AKfycbwu_FZgR3nuCxFB92YKhspk-yWo5RfKvBLlsMHOi7JMXejTC-cXJH0L6XddScadq7LQ/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ nombre, correo, telefono, zona, tipo_credito, edad })
+    });
+
+    document.getElementById("whatsapp-btn").style.display = "block";
+    alert("✅ ¡Gracias por tu registro! Ahora puedes continuar por WhatsApp. Un asesor certificado te atenderá.");
+  });
+</script>
+</body>
+</html>
