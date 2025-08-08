@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -57,7 +58,7 @@
     .form-group {
       margin-bottom: 15px;
     }
-    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    input[type="text"], input[type="email"], input[type="tel"], select {
       width: 100%;
       padding: 12px;
       border: none;
@@ -127,51 +128,39 @@
       <h2>Desde $690,000 hasta $5,000,000</h2>
       <p class="subinfo">Déjanos tus datos y recibe atención profesional ✨<br>📊 Precalificación Infonavit / Bancaria y asesoría sin costo ni compromiso</p>
       <form id="formulario-casa">
-        <div class="form-group">
-          <label for="nombre">Nombre completo</label>
-          <input type="text" id="nombre" name="nombre" required />
-        </div>
-        <div class="form-group">
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" />
-        </div>
-        <div class="form-group">
-          <label for="telefono">Teléfono / WhatsApp</label>
-          <input type="tel" id="telefono" name="telefono" required pattern="\d{10}" />
-        </div>
-        <div class="form-group">
-          <label for="zona">¿En qué zona te gustaría invertir?</label>
-          <select id="zona" name="zona" required>
-            <option value="">Selecciona una zona</option>
-            <option value="Zapopan">Zapopan</option>
-            <option value="Tlajomulco">Tlajomulco</option>
-            <option value="El Salto">El Salto</option>
-            <option value="Tonalá">Tonalá</option>
-            <option value="Guadalajara Centro">Guadalajara Centro</option>
-            <option value="Otra">Otra zona</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="tipo_credito">¿Qué tipo de crédito o pago usarás?</label>
-          <select id="tipo_credito" name="tipo_credito" required>
-            <option value="">Selecciona un tipo de crédito</option>
-            <option value="Infonavit">Infonavit</option>
-            <option value="Fovissste">Fovissste</option>
-            <option value="Bancario">Bancario</option>
-            <option value="Recurso Propio">Recurso Propio</option>
-            <option value="Otro"> Otro Credito</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="edad">¿Qué edad tienes?</label>
-          <select id="edad" name="edad" required>
-            <option value="">Cual es tu Presupuesto</option>
-            <option value="De 500,000 a 1 Millon">De 500,000 a 1 Millon</option>
-            <option value="De 1 Millon a 2 Millones">De 2 Millones a 3 Millones</option>
-            <option value="De 3 Millones a 4 Millones">De 3 Millones a 4 Millones</option>
-            <option value="Mas de 5 Millones">Mas de 5 Millones</option>
-          </select>
-        </div>
+        <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" required /></div>
+        <div class="form-group"><label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" required /></div>
+        <div class="form-group"><label for="telefono">Teléfono / WhatsApp</label><input type="tel" id="telefono" name="telefono" required /></div>
+        <div class="form-group"><label for="zona">¿En qué zona te gustaría invertir?</label><select id="zona" name="zona" required>
+          <option value="">Selecciona una zona</option>
+          <option value="Zapopan">Zapopan</option>
+          <option value="Tlajomulco">Tlajomulco</option>
+          <option value="El Salto">El Salto</option>
+          <option value="Tonalá">Tonalá</option>
+          <option value="Guadalajara Centro">Guadalajara Centro</option>
+          <option value="Otra">Otra zona</option>
+        </select></div>
+        <div class="form-group"><label for="tipo_credito">¿Qué tipo de crédito o pago usarás?</label><select id="tipo_credito" name="tipo_credito" required>
+          <option value="">Selecciona un tipo de crédito</option>
+          <option value="Infonavit">Infonavit</option>
+          <option value="Fovissste">Fovissste</option>
+          <option value="Bancario">Bancario</option>
+          <option value="Recurso Propio">Recurso Propio</option>
+          <option value="Otro">Otro Crédito</option>
+        </select></div>
+        <div class="form-group"><label for="presupuesto">¿Cuál es tu presupuesto?</label><select id="presupuesto" name="presupuesto" required>
+          <option value="">Selecciona tu presupuesto</option>
+          <option value="De 500,000 a 1 Millón">De 500,000 a 1 Millón</option>
+          <option value="De 1 Millón a 2 Millones">De 1 Millón a 2 Millones</option>
+          <option value="De 2 Millones a 3 Millones">De 2 Millones a 3 Millones</option>
+          <option value="De 3 Millones a 4 Millones">De 3 Millones a 4 Millones</option>
+          <option value="Más de 5 Millones">Más de 5 Millones</option>
+        </select></div>
+        <div class="form-group"><label for="asesor">¿Eres asesor?</label><select id="asesor" name="asesor" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select></div>
         <button type="submit">Quiero información</button>
       </form>
       <div class="whatsapp-btn" id="whatsapp-btn">
@@ -183,9 +172,7 @@
       <div class="step">📊 Te mostramos solo opciones que se adaptan a ti</div>
       <div class="step">🏠 Te acompañamos hasta que tengas tus llaves en la mano</div>
     </div>
-    <div class="marca">
-      Trhoncal Homes – Renovando al límite ⚡
-    </div>
+    <div class="marca">Trhoncal Homes – Renovando al límite ⚡</div>
   </div>
   <script>
     document.getElementById("formulario-casa").addEventListener("submit", function(e) {
@@ -195,18 +182,14 @@
       const telefono = document.getElementById("telefono").value;
       const zona = document.getElementById("zona").value;
       const tipo_credito = document.getElementById("tipo_credito").value;
-      const edad = document.getElementById("edad").value;
+      const presupuesto = document.getElementById("presupuesto").value;
+      const asesor = document.getElementById("asesor").value;
 
-      if (!correo.includes("@") || !/^\d{10}$/.test(telefono)) {
-        alert("Por favor, verifica que el correo tenga formato válido y el teléfono tenga 10 dígitos.");
-        return;
-      }
-
-      fetch("https://script.google.com/macros/s/AKfycbwu_FZgR3nuCxFB92YKhspk-yWo5RfKvBLlsMHOi7JMXejTC-cXJH0L6XddScadq7LQ/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbw89F4br1UO-zKJOQ6mslW8gxA602Hmj9OaT3PwGT_wZdFMoTEPHV_PT56u7wMsYWNixQ/exec", {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, correo, telefono, zona, tipo_credito, edad })
+        body: JSON.stringify({ nombre, correo, telefono, zona, tipo_credito, presupuesto, asesor })
       });
 
       document.getElementById("whatsapp-btn").style.display = "block";
