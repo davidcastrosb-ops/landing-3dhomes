@@ -1,183 +1,230 @@
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #f7f7f7;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-      header, .form-section {
-        padding: 20px;
-        max-width: 700px;
-        margin: auto;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        margin-top: 20px;
-      }
-      h1, h2 {
-        color: #2c3e50;
-      }
-      input, textarea, button {
-        width: 100%;
-        padding: 12px;
-        margin: 8px 0;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-sizing: border-box;
-        transition: all 0.3s ease-in-out;
-        font-family: 'Poppins', sans-serif;
-      }
-      input:focus, textarea:focus {
-        border-color: #ffd700;
-        outline: none;
-        box-shadow: 0 0 5px rgba(255,215,0,0.5);
-      }
-      button {
-        background-color: #ffd700;
-        color: #000;
-        font-weight: bold;
-        cursor: pointer;
-        border: none;
-      }
-      button:hover {
-        background-color: #e6c200;
-      }
-      .checkbox-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .checkbox-grid label {
-        flex: 1 1 45%;
-      }
-      .success-message {
-        margin-top: 15px;
-        font-weight: bold;
-        color: green;
-        display: none;
-        text-align: center;
-      }
-    </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Tu casa sin enganche | 3D Homes</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .success-message {
-        margin-top: 15px;
-        font-weight: bold;
-        color: green;
-        display: none;
-      }
-    </style>
-  </head>
- <!-- Meta Pixel Code -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Casa con Crédito Infonavit - 3D Homes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Pixel Meta -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '959639488034094');
     fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=959639488034094&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
-  <body>
-    <header>
-      <h1>🏡 Haz realidad el sueño de tu casa propia</h1>
-      <p>✨ Hoy puedes dar el primer paso hacia un hogar que será solo tuyo.</p>
-    </header>
-
-    <section class="form-section">
-      <h2>📩 Déjanos tus datos y recibe atención personalizada, sin compromiso</h2>
-      <p class="subtext">
-        🎯 Te mostraremos solo opciones que se adapten a ti.<br>
-        🔒 Tus datos están protegidos y se usarán exclusivamente para ayudarte a encontrar el hogar ideal para ti y tu familia.<br>
-        💬 Estamos contigo desde la búsqueda... hasta que tengas las llaves en la mano.
-      </p>
-
-      <form id="registroForm">
-        <input type="text" name="nombre" placeholder="Tu nombre completo" required />
-        <input type="email" name="correo" placeholder="Correo electrónico" required />
-        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required />
-
-        <label><strong>¿En qué zona te gustaría Invertir?</strong></label>
-        <div class="checkbox-grid">
-          <label><input type="checkbox" name="zona" value="Zapopan"> Zapopan</label>
-          <label><input type="checkbox" name="zona" value="Tlajomulco"> Tlajomulco</label>
-          <label><input type="checkbox" name="zona" value="Santa Anita"> Santa Anita</label>
-          <label><input type="checkbox" name="zona" value="Zona Guadalajara"> Guadalajara</label>
-          <label><input type="checkbox" name="zona" value="Tonala"> Tonalá</label>
-          <label><input type="checkbox" name="zona" value="El Salto"> El Salto</label>
+  <!-- Google Ads Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-977116457"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-977116457');
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+    }
+    h1, h2, p, label {
+      color: #fff;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.4em;
+      font-weight: 400;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .subinfo {
+      font-size: 1em;
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #000;
+      font-size: 1em;
+      box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+    }
+    button {
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e6b800;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      gap: 20px;
+      max-width: 600px;
+      width: 100%;
+    }
+    .step {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+    }
+    .marca {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .whatsapp-btn {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .whatsapp-btn a {
+      background-color: #25d366;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="form-container">
+      <h1>Tu casa propia desde 0% de enganche 🏡</h1>
+      <h2>Desde $690,000 hasta $5,000,000</h2>
+      <p class="subinfo">Déjanos tus datos y recibe atención profesional ✨<br>📊 Precalificación Infonavit / Bancaria y asesoría sin costo ni compromiso</p>
+      <form id="formulario-casa">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required />
         </div>
-        <textarea name="zona_otro" placeholder="¿Otra Zona específica ?"></textarea>
-
-        <label><strong>¿Qué tipo de crédito o pago usarás?</strong></label>
-        <div class="checkbox-grid">
-          <label><input type="checkbox" name="credito" value="Infonavit"> Infonavit</label>
-          <label><input type="checkbox" name="credito" value="Bancario"> Bancario</label>
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" />
         </div>
-        <textarea name="credito_otro" placeholder="Especifica forma de pago"></textarea>
-
-        <label><strong>¿Qué edad tienes?</strong></label>
-        <div class="checkbox-grid">
-          <label><input type="radio" name="edad" value="22-29"> 22 a 29</label>
-          <label><input type="radio" name="edad" value="30-39"> 30 a 39</label>
-          <label><input type="radio" name="edad" value="40-49"> 40 a 49</label>
-          <label><input type="radio" name="edad" value="50+"> Más de 50</label>
+        <div class="form-group">
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input type="tel" id="telefono" name="telefono" required pattern="\d{10}" />
         </div>
-
-        <textarea name="mensaje" placeholder="¿Otra información?"></textarea>
+        <div class="form-group">
+          <label for="zona">¿En qué zona te gustaría invertir?</label>
+          <select id="zona" name="zona" required>
+            <option value="">Selecciona una zona</option>
+            <option value="Zapopan">Zapopan</option>
+            <option value="Tlajomulco">Tlajomulco</option>
+            <option value="El Salto">El Salto</option>
+            <option value="Tonalá">Tonalá</option>
+            <option value="Guadalajara Centro">Guadalajara Centro</option>
+            <option value="Otra">Otra zona</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tipo_credito">¿Qué tipo de crédito o pago usarás?</label>
+          <select id="tipo_credito" name="tipo_credito" required>
+            <option value="">Selecciona un tipo de crédito</option>
+            <option value="Infonavit">Infonavit</option>
+            <option value="Fovissste">Fovissste</option>
+            <option value="Bancario">Bancario</option>
+            <option value="Recurso Propio">Recurso Propio</option>
+            <option value="Segundo Crédito">Segundo Crédito</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="edad">¿Qué edad tienes?</label>
+          <select id="edad" name="edad" required>
+            <option value="">Selecciona tu rango de edad</option>
+            <option value="22-29">22 a 29</option>
+            <option value="30-39">30 a 39</option>
+            <option value="40-49">40 a 49</option>
+            <option value="50+">Más de 50</option>
+          </select>
+        </div>
         <button type="submit">Quiero información</button>
       </form>
+      <div class="whatsapp-btn" id="whatsapp-btn">
+        <a href="https://wa.me/523329335952" target="_blank">📲 Continuar por WhatsApp (un asesor certificado te atenderá)</a>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">1️⃣ Llena el formulario y cuéntanos tu situación</div>
+      <div class="step">2️⃣ Te mostramos solo opciones que se adaptan a ti</div>
+      <div class="step">3️⃣ Te acompañamos hasta que tengas tus llaves en la mano</div>
+    </div>
+    <div class="marca">
+      Trhoncal Homes – Renovando al límite ⚡
+    </div>
+  </div>
+  <!-- Google Ads conversion event trigger -->
+  <script>
+    document.getElementById("formulario-casa").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const correo = document.getElementById("correo").value;
+      const telefono = document.getElementById("telefono").value;
 
-      <p class="success-message" id="mensajeExito">✅ ¡Datos enviados con éxito!</p>
-    </section>
+      if (!correo.includes("@") || !/^\d{10}$/.test(telefono)) {
+        alert("Por favor, verifica que el correo tenga formato válido y el teléfono tenga 10 dígitos.");
+        return;
+      }
 
-    <a href="https://wa.me/523329335952?text=Hola,%20quiero%20más%20información%20sobre%20las%20casas%20sin%20enganche" class="whatsapp" target="_blank">WhatsApp</a>
-
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwu_FZgR3nuCxFB92YKhspk-yWo5RfKvBLlsMHOi7JMXejTC-cXJH0L6XddScadq7LQ/exec';
-      const form = document.getElementById('registroForm');
-      const mensajeExito = document.getElementById('mensajeExito');
-
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        const formData = new FormData(form);
-        
-    // Procesar manualmente los checkbox múltiples
-    const zonas = [...form.querySelectorAll('input[name="zona"]:checked')].map(cb => cb.value).join(', ');
-    const creditos = [...form.querySelectorAll('input[name="credito"]:checked')].map(cb => cb.value).join(', ');
-
-    formData.set('zona', zonas);
-    formData.set('credito', creditos);
-
-    fetch(scriptURL, { method: 'POST', body: formData })
-    
-          .then(response => {
-            form.reset();
-            mensajeExito.style.display = 'block';
-            fbq('track', 'Lead');
-          })
-          .catch(error => {
-            form.reset();
-            mensajeExito.style.display = 'block';
-            console.log("Se registró el error visual, pero los datos fueron enviados:", error);
-          });
+      // Disparar conversión de Google Ads
+      gtag('event', 'conversion', {
+        'send_to': 'AW-977116457/6g0RCI3irIEbEKm69tED'
       });
-    </script>
-  </body>
+
+      // Activar botón de WhatsApp
+      document.getElementById("whatsapp-btn").style.display = "block";
+      alert("✅ ¡Gracias por tu registro! Ahora puedes continuar por WhatsApp. Un asesor certificado te atenderá.");
+    });
+  </script>
+</body>
 </html>
